@@ -16,19 +16,6 @@ android {
         ndk { abiFilters += listOf("arm64-v8a", "armeabi-v7a") }
     }
 
-    // Fixed debug key so every new build installs over the old one.
-    signingConfigs {
-        getByName("debug") {
-            storeFile = file("../keystore/jarvis-debug.jks")
-            storePassword = "android"
-            keyAlias = "androiddebugkey"
-            keyPassword = "android"
-        }
-    }
-    buildTypes {
-        getByName("debug") { signingConfig = signingConfigs.getByName("debug") }
-    }
-
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
