@@ -20,5 +20,5 @@ Open apps, call contacts, open WhatsApp/SMS with a typed message, set alarms and
 
 ## Notes
 - The APK is built automatically by GitHub Actions on every push to `main`.
-- `keystore/jarvis-debug.jks` is a debug signing key so updates install over older versions. It is not for Play Store releases.
+- Each build is signed with a fresh debug key, so to install a newer build, uninstall the old Jarvis first (then paste your Gemini key again).
 - Phone makers like Xiaomi, Vivo, Oppo and Realme kill background apps aggressively. Also turn on **Autostart** for Jarvis and lock it in recent apps.
